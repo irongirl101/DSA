@@ -127,7 +127,6 @@ def circulardoublylinkedlist():
         currentnode=currentnode.prev 
 
 #traversal of a linked list -> same as anything above 
-
 #remove an element 
 def removeelement():
     class Node:
@@ -137,10 +136,10 @@ def removeelement():
 
     def delelement(head, s ): # s= node to delete 
         if head == s:
-            return head.next 
+            return head.next # gives next node 
         
         currentnode = head 
-        while currentnode.next and currentnode.next != s :
+        while currentnode.next and currentnode.next != s : #checking if the next node is not s 
             currentnode=currentnode.next 
         
         if currentnode.next is None:
@@ -165,6 +164,46 @@ def removeelement():
     while currentnode:
         print(currentnode.data)
         currentnode = currentnode.next 
+
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+
+
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+
+def insertelement(head,newnode,position):
+    if position==1:
+        newnode.next = head 
+        return newnode
+    
+    currentnode = head 
+    for _ in range(position-2):
+        if currentnode is None:
+            break 
+        currentnode = currentnode.next 
+
+    newnode.next = currentnode.next 
+    currentnode.next = newnode
+    return head 
+
+
+node1.next = node2
+node2.next = node3 
+node3.next = node4 
+
+newnode = Node(5) 
+position = 2 
+node1 = insertelement(node1,newnode,position)
+
+currentnode = node1 
+while currentnode:
+    print(currentnode.data)
+    currentnode=currentnode.next 
 
 
             
