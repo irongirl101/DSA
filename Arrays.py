@@ -10,12 +10,25 @@ def lowest_value(l):
             min = i 
     return min 
 
+#time complexity = o(n^2)
 def bubble_sort(l): 
     for i in range(len(l)-1):
         for j in range(len(l)-i-1):
             if l[j]>l[j+1]:
                 l[j],l[j+1] = l[j+1],l[j]
     return l 
+
+#time complexity = o(n^2)
+def selection_sort(l):
+    for i in range(len(l)-1):
+        min = l[0]
+        for j in range(i+1,len(l)):
+            if l[j] < min:
+                min = j 
+        value = l.pop(min)
+        l.insert(0,value)
+    return l 
+
 
 
 
