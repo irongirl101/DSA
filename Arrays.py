@@ -21,14 +21,14 @@ def bubble_sort(l):
 #time complexity = o(n^2)
 def selection_sort(l):
     for i in range(len(l)-1):
-        min = l[0]
+        min = i
         for j in range(i+1,len(l)):
-            if l[j] < min:
-                min = j 
+            if l[j]< l[min] :
+                min = j
         value = l.pop(min)
-        l.insert(0,value)
+        l.insert(i,value)
     return l 
-
+print(selection_sort(l))
 
 
 
