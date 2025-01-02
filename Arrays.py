@@ -2,6 +2,9 @@
 
 l = [7,12,9,11,3]
 
+
+#SORTING ALGS 
+
 #time complexity = O(n)
 def lowest_value(l):
     min = l[0]
@@ -49,7 +52,7 @@ def insert_sort(l):
 print(selection_sort(l))
 
 
-
+s
 
 
 
