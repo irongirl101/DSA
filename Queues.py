@@ -36,5 +36,33 @@ print(q.pop())
 print(q.peek())
 print(q.size())
     
+#Queue implementation using linked lists 
+
+class Node():
+    def __init__(self,data):
+        self.data = data
+        self.next = None 
+
+class Queue():
+    def __init__(self):
+        self.front = None
+        self.rear = None 
+        self.length = None 
+    
+    def enqueue(self,x):
+        node = Node(x)
+        if self.rear == None:
+            self.front = self.rear = node 
+            self.length+=1 
+            return
+        self.rear.next = node 
+        self.rear = node 
+        self.length+=1 
+    
+    def dequeue(self):
+        if self.length == 0:
+            return "empty"
+
+
         
 
