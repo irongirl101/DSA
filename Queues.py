@@ -25,7 +25,16 @@ class Queue:
     def size(self):
         return len(self.l)
 
+q = Queue()
 
+for i in range(5):
+    q.add(i)
+
+#print(q.l) -> method to print 
+
+print(q.pop())
+print(q.peek())
+print(q.size())
     
         
 
