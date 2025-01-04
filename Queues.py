@@ -69,7 +69,23 @@ class Queue():
         if self.front== None:
             self.rear = None 
         return temp.data 
+    
+    def peek(self):
+        if self.length == 0:
+            return "empty"
+        else:
+            return self.front.data
 
+    def size(self):
+        return self.length
+    
+    def displayqueue(self):
+        temp = self.front 
+        while temp:
+            print(temp.data,end='')
+            temp = temp.next 
+        print()
+        
     
         
 
