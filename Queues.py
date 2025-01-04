@@ -62,7 +62,16 @@ class Queue():
     def dequeue(self):
         if self.length == 0:
             return "empty"
+        
+        temp = self.front 
+        self.front = temp.next 
+        self.length-=1
+        if self.front== None:
+            self.rear = None 
+        return temp.data 
 
+    
+        
 
         
 
