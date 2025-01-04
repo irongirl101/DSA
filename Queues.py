@@ -85,7 +85,16 @@ class Queue():
             print(temp.data,end='')
             temp = temp.next 
         print()
-        
+
+l = Queue()
+
+l.enqueue(1)
+l.enqueue(2)
+l.enqueue(3)
+l.displayqueue()
+
+
+
     
         
 
