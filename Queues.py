@@ -92,6 +92,9 @@ l.enqueue(1)
 l.enqueue(2)
 l.enqueue(3)
 l.displayqueue()
+print(l.peek())
+print(l.size())
+
 
 
 
