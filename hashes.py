@@ -17,3 +17,11 @@ def contains(value):
     n = hash(value)
     return l[n] == value
 
+def add(value):
+    n = hash(value)
+    i = l[n]
+    if value != i:
+        l.append(value)
+
+
+
