@@ -1,5 +1,7 @@
 #hashes lesgooo 
 
+
+#TABLES
 #a hash table hash values have its own seperate algorithm, presumably using premade algs sintead of creating your own . 
 #typically act like key value pairs, mainly used for locating stuff.  
 
@@ -24,6 +26,7 @@ def add(value):
         l.append(value)
 #typically, collisions should not occur. if it can occur, depending on your algs, make each element a list of that certain hash value, and if collision occurs, add to that index
 
+#SETS 
 
 
 
