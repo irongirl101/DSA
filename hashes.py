@@ -26,7 +26,6 @@ def add(value):
         l.append(value)
 #typically, collisions should not occur. if it can occur, depending on your algs, make each element a list of that certain hash value, and if collision occurs, add to that index
 
-#SETS 
-
+#SETS.
 
 
