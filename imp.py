@@ -9,4 +9,5 @@ Things that I want to accomplish
 - try building a game?? maybe?? -> need good gpu tho, so idk 
 - learn, learn,learn 
 - etc.
+- maybe a much more user friendly version of google earth/maps?
 '''
