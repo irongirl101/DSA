@@ -10,4 +10,5 @@ Things that I want to accomplish
 - learn, learn,learn 
 - etc.
 - maybe a much more user friendly version of google earth/maps?
+- learn how to use apis 
 '''
