@@ -12,4 +12,5 @@ Things that I want to accomplish
 - maybe a much more user friendly version of google earth/maps?
 - learn how to use apis 
 - leettttttt
+- build the app that you want to. make the games you want to. 
 '''
