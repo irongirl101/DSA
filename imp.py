@@ -13,4 +13,5 @@ Things that I want to accomplish
 - learn how to use apis 
 - leettttttt
 - build the app that you want to. make the games you want to. 
+- Learn how to game dev, use game engines
 '''
