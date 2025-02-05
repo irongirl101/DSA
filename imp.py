@@ -14,6 +14,6 @@ Things that I want to accomplish
 - leettttttt
 - build the app that you want to. make the games you want to. 
 - jltg: after in depth analysis is done
-.
+- get the diff bw react and flutter
 - Learn how to game dev, use game engines
 '''
