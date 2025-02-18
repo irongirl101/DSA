@@ -52,7 +52,7 @@ def insert_sort(l):
 print(selection_sort(l))
 
 
-s
+
 
 
 
