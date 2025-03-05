@@ -49,7 +49,7 @@ def insert_sort(l):
                 insert = j 
         l.insert(insert,value)
     return l 
-print(selection_sort(l))
+print(bubble_sort([4,6,2,1,5,8]))
 
 
 
