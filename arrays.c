@@ -1,14 +1,12 @@
 #include <stdio.h> 
 
 
-//bubble sort 
+//bubble sort, time complexity o(n^2), with best case o(n)  
 
-
-int bubble(){
-    int arr[] = {4,6,2,1,5,8}; 
-     
-    for(int i = 0; i<sizeof(arr)/sizeof(arr[0])-1; i++ ){ //goes through the array 
-        for(int j=0; j<(sizeof(arr)/sizeof(arr[0]))-i-1; j++){
+void bubble(int arr[], int n ){
+    
+    for(int i = 0; i<n-1; i++ ){ //goes through the array 
+        for(int j=0; j<n-i-1; j++){
             if (arr[j]<arr[j+1])
             {
                int temp = arr[j]; 
@@ -19,13 +17,29 @@ int bubble(){
         }
 
     }
-    for(int i = 0 ; i<sizeof(arr)/sizeof(arr[0]); i++){
+    for(int i = 0 ; i<n; i++){
         printf("%d \n", arr[i]); 
     }
-    return 0; 
+    
+}
+
+void selection(int arr[], int n){
+    for(int i = 0; i<n-1; i++){
+        int min = i ; 
+        for(int j = i+1; j<n; j++){
+            if(arr[j]<arr[min]){
+                min = j; 
+            }
+        }
+        int value = arr
+
+    }
+
 }
 
 int main(){
-
+    int arr[6] = {4,7,2,1,3,5}; 
+    int n = sizeof(arr)/sizeof(arr[0]); 
+    bubble(arr,n); 
     return 0; 
 }
