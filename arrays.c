@@ -42,7 +42,7 @@ void selection(int arr[], int n){
                 min = j; 
             }
         }
-        //int value = arr
+        //int value = arr..
 
     }
 
