@@ -39,6 +39,8 @@ n^2 (+n/2 -> negligible)
 
 o(n^2) 
 
+Best and worst case is O(n^2) as it alwawys scans through the list, even if sorted
+It is not a stable sort, because it can alter the relative order of the elements, due to it swapping non adjacent elements can distrupt it. 
 '''
 def selection_sort(l):
     for i in range(len(l)-1): 
@@ -49,3 +51,23 @@ def selection_sort(l):
         value = l.pop(min)
         l.insert(i,value)
     return l 
+'''
+O(n^2) 
+n*n = n^2 
+'''
+def insert_sort(l):
+    for i in range(len(l)):
+        insert = i 
+        value = l.pop(i)
+        for j in range(len(l),-1,-1):
+            if l[j]> value:
+                insert = j 
+        l.insert(insert,value)
+    return l 
+
+
+'''
+Counting sort is O(n+k) ~ O(n) 
+however not effective at all 
+
+'''

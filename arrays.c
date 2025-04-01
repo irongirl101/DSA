@@ -6,8 +6,8 @@ void bubble(int *arr, int n ){
     
     //printf("size %d", sizeof(arr));
 
-    printf("nume =  %zu\n", sizeof(*arr));
-    printf("den =  %zu\n", sizeof(arr[0]));
+    //printf("nume =  %zu\n", sizeof(*arr));
+    //printf("den =  %zu\n", sizeof(arr[0]));
 
 
     for(int i = 0; i<n-1; i++ ){ //goes through the array ..
@@ -26,7 +26,9 @@ void bubble(int *arr, int n ){
         printf("%d \n", arr[i]); 
     }
 
-   for(int i = n+1 ; i>=0; i--){
+
+    printf("done\n");
+   for(int i = n-1 ; i>=0; i--){
         printf("%d \n", arr[i]); 
     } 
 
@@ -65,7 +67,7 @@ void selection(int arr[], int n){
     }
 
 }
-
+/*
 //{4,1,2,3}
 //i = 0 current value = 4 
 //4>1, {1,4,2,3}
@@ -99,32 +101,36 @@ void selection(int arr[], int n){
 
 //logic : 2 loops, one that goes through the array (changed or not), and swap if current value > arr[j] and skip if current value <= arr[j]
 
-//insert = 4, then compare it against each number, other than itself. 
+//insert = 4, then compare it against each number, other than itself. */
 void insertion(int arr[],int n){
-    for(int i = 0; i<n; i++){
-        int insert = i; 
+    for(int i = 0; i<n; i++){ 
         int current_value = arr[i]; 
-        for(int j = 0; j<n; j++){
-            if(current_value>arr[j]){
-                int temp = arr[j]; 
-                arr[j] = arr[i]; 
-                arr[i] = temp;
+        int j = i -1; 
 
-
-            }
+        while (j >= 0 && arr[j] > current_value) {
+            arr[j + 1] = arr[j];
+            j--;
         }
+        
+        arr[j + 1] = current_value; 
     }
-    for (int i = n+1; i >=0; i--)
+    for (int i = n-1; i >=0; i--)
     {
         printf("%d \n",arr[i]);
     }
     
-
 }
 
+/*
+Difference bw selection sort and insertion sort 
+Selection sort splits the array into two parts, one sorted and the other unsorted. 
+It selects the smallest element from the unsorted array and then swaps it 
+
+Insertion Sort inserts the element in its correct position -> using shifting and not swapping 
+*/
 
 int main(){
-    int arr[6] = {4,7,2,1,3,5}; 
+    int arr[10] = {4,7,2,1,3,5,17, 28,11, 66}; 
     int n = sizeof(arr)/sizeof(arr[0]); 
 
 //    printf("nume =  %d\n", sizeof(arr));
