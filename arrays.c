@@ -121,6 +121,11 @@ void insertion(int arr[],int n){
     
 }
 
+void counting(int arr[], int n){
+
+    
+}
+
 /*
 Difference bw selection sort and insertion sort 
 Selection sort splits the array into two parts, one sorted and the other unsorted. 

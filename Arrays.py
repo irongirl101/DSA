@@ -58,6 +58,8 @@ def insert_sort(l):
         #quick sort is almost like binary search, excepting sorting 
 '''Logic behind quicksort: an array of elements, gets split in the middle, and continues to get split until the lowest number is reached 
     ok so, 
+    a pivot element is chosen, typically the last element
+    and is divided into two halves acrosss the pivot element 
 
 
 '''
