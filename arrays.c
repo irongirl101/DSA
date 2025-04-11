@@ -120,12 +120,44 @@ void insertion(int arr[],int n){
     }
     
 }
+int binary(int key,int arr[], int size){
+    int low = 0; 
+    int high = size-1; 
 
-void counting(int arr[], int n){
+    while(low<=high){
+        int mid = (low+high)/2; 
 
-    
+        if (arr[mid] == key){
+            return arr[mid]; 
+        }
+        else if(mid>key){
+            high = mid-1; 
+        }
+        else{
+            low = mid+1; 
+        }
+    }   
+    return -1; 
 }
 
+int binary_Rec(int key, int arr[], int low, int high){
+    if(low>=high){
+        return -1; 
+    }
+    else{
+        int mid = (low+high)/2; 
+        if(mid == key){
+            return 1; 
+        }
+        else if(mid>key){
+            return binary_Rec(key,arr,low,mid-1);
+        }
+        else{
+            return binary_Rec(key,arr,mid+1,high); 
+        }
+
+    }
+}
 /*
 Difference bw selection sort and insertion sort 
 Selection sort splits the array into two parts, one sorted and the other unsorted. 
