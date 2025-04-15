@@ -140,6 +140,38 @@ int binary(int key,int arr[], int size){
     return -1; 
 }
 
+void counting(int arr[],int n){
+    //gives me the largest number 
+    int max = arr[0]; 
+    for(int i = 0; i<n; i++){
+        if(max<arr[i]){
+            max = arr[i]; 
+        }
+    }
+    int count_arr[max]; //creates an array of length of max 
+
+    for(int i =0; i<=max; i++){
+        count_arr[i] = 0; //creates array of only zeroes for the time being 
+    }
+
+    for(int i = 0; i<n; i++){//finds the total number of times each value comes 
+        int pos = arr[i]; 
+        count_arr[pos]+=1; 
+        arr[i] = 0; 
+    } 
+    int index = 0;
+    for (int i = 0; i <= max; i++) {
+        while (count_arr[i] > 0) {
+            arr[index++] = i;
+            count_arr[i]--;
+        }
+    }
+    for (int i = n-1; i >=0; i--)
+    {
+        printf("%d \n",arr[i]);
+    }
+}
+
 int binary_Rec(int key, int arr[], int low, int high){
     if(low>=high){
         return -1; 
@@ -166,17 +198,19 @@ It selects the smallest element from the unsorted array and then swaps it
 Insertion Sort inserts the element in its correct position -> using shifting and not swapping 
 */
 
+void quicksort(){} //will come back to this 
+
 int main(){
-    int arr[10] = {4,7,2,1,3,5,17, 28,11, 66}; 
+    int arr[10] = {2,3,4,5,1,2,0,3,1,2}; 
     int n = sizeof(arr)/sizeof(arr[0]); 
 
 //    printf("nume =  %d\n", sizeof(arr));
 //    printf("den =  %d\n", sizeof(arr[0]));
 
-
-    insertion(arr,n); 
+    counting(arr,n); 
     return 0; 
 }
+
 
 
 

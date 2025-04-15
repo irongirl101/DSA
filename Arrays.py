@@ -87,12 +87,12 @@ def quicksort(array, low=0, high=None):
 
 #sorts the array by counting the number of times a value occurs in the array 
 #only works for non negative integer values 
-#the max number of same value must be less than the totall number of values in the array
+#the max number of same value must be less than the total number of values in the array
 
 '''
 Logic which i think is correct 
 Find the max number in the list 
-create a list of length using the max number , where each element for the tune being is 0, and remove that value
+create a list of length using the max number , where each element for the time being is 0, and remove that value
 now, going through the og list, increase the value in the counting list at that number's position 
 this is countinued till the og array = [] 
 then with the number, and the index, each number is added back to the array 
@@ -125,7 +125,18 @@ def counting_sort(l):
 
         return l
 
+#Radix sort must be stable in order for it to sort properly 
+#works for non negative integers only 
 
+'''RADIX SORT MY LOGIC
+create a 2D array [[],[],[]...], 9 sub arrays (indexing 0 to 9)
+
+get the last digit of each number (i.e will be the position) 
+
+
+'''
+def radix_sort(l):
+    return l 
 arr = [4, 6, 2, 1, 5, 8]
 quicksort(arr)
 print(arr)
