@@ -200,6 +200,27 @@ Insertion Sort inserts the element in its correct position -> using shifting and
 
 void quicksort(){} //will come back to this 
 
+//wwill come back 
+void radixsort(int arr[],int size){
+    //getting max value
+    int max = arr[0]; 
+    for(int i = 1; i<size;i++){
+        if(arr[i]>max){
+            max = arr[i]; 
+        }
+    }
+    int exp = 1; 
+
+    while((max/exp)>0){
+        int radix[10][1] = {{},{},{},{},{},{},{},{},{},{}}; 
+        for(int i = 0; i<size; i++){
+            int ind = (i/exp)%10; 
+
+        }
+    }
+
+}
+
 int main(){
     int arr[10] = {2,3,4,5,1,2,0,3,1,2}; 
     int n = sizeof(arr)/sizeof(arr[0]); 

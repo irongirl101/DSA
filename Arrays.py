@@ -52,7 +52,7 @@ def insert_sort(l):
 
 
 #QUICKSORTTTTT
-
+        #time complexity worst case is O(n^2)
         #notes about quick sort -> uses recursion, has a pivot value 
         #will come back to this 
         #quick sort is almost like binary search, excepting sorting 
@@ -88,7 +88,7 @@ def quicksort(array, low=0, high=None):
 #sorts the array by counting the number of times a value occurs in the array 
 #only works for non negative integer values 
 #the max number of same value must be less than the total number of values in the array
-
+#time complexity O(n+k)
 '''
 Logic which i think is correct 
 Find the max number in the list 
@@ -127,18 +127,62 @@ def counting_sort(l):
 
 #Radix sort must be stable in order for it to sort properly 
 #works for non negative integers only 
-
+#radix sort can be implemented with other sorts, as long as its stable (i.e. like bubble sort or counting sort); 
+#time complexity O(nk)
 '''RADIX SORT MY LOGIC
 create a 2D array [[],[],[]...], 9 sub arrays (indexing 0 to 9)
 
-get the last digit of each number (i.e will be the position) 
-
+get the last digit of each number (i.e will be the position) i.e. mod by 10->gets the last digit; and divide by 10
+keep those numbers at its respective position in the radix array, while removing from the original array 
+then iteratively add them back into the og array,while removing from the radix 
 
 '''
 def radix_sort(l):
-    return l 
-arr = [4, 6, 2, 1, 5, 8]
-quicksort(arr)
+    radix = [[],[],[],[],[],[],[],[],[],[]]#array into which each number gets added to 
+    max = arr[0]
+    for i in l: 
+        if max<i: 
+            max = i
+    exp = 1 #the 10th at which the number divides in order to get the modulus 
+    while max//exp>0:
+        while len(l)>0: 
+            val = l.pop() #remvoing the value 
+            ind = (val//exp)%10 #gets the index at which should be added in radix 
+            radix[ind].append(val) 
+
+        for i in radix: #going through radix 
+            while len(i)>0: 
+                val = i.pop() #popping out each value and then putting it back into og arr 
+                l.append(val)
+        exp*=10 
+    return l
+
+def radixSortWithBubbleSort(arr):
+    max_val = max(arr)
+    exp = 1
+    
+    while max_val // exp > 0:
+        radixArray = [[],[],[],[],[],[],[],[],[],[]]
+        
+        for num in arr:
+            radixIndex = (num // exp) % 10
+            radixArray[radixIndex].append(num)
+        
+        for bucket in radixArray:#making bubble sort do the stabilization for you 
+            bubble_sort(bucket)
+        
+        i = 0
+        for bucket in radixArray:
+            for num in bucket:
+                arr[i] = num
+                i += 1
+        
+        exp *= 10
+
+def merge_sort(l):
+    
+arr = [170, 45, 75, 90, 802, 24, 2, 66]
+radix_sort(arr)
 print(arr)
 #print(bubble_sort([4,6,2,1,5,8]))
 
